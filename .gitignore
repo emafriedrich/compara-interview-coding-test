@@ -59,3 +59,7 @@ Thumbs.db
 
 # Visual Code Studio
 /.vscode
+
+# Added by Emanuel
+
+coverage/
