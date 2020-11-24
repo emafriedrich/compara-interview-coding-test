@@ -1,6 +1,6 @@
 import { InsuranceCompany, NormalCoverage, SuperSale } from "../src/company";
 
-describe("Never negative", () => {
+describe("General tests", () => {
   let company: InsuranceCompany;
   const basePrice = 0;
 
@@ -10,6 +10,7 @@ describe("Never negative", () => {
     company.addProduct(new NormalCoverage(sellIn, basePrice));
     company.addProduct(new SuperSale(sellIn, basePrice));
   });
+
   it("Never negative", () => {
     company.updatePrice();
     company.updatePrice();
@@ -19,7 +20,7 @@ describe("Never negative", () => {
     });
   });
 
-  it("Test attributes", () => {
+  it("Test set attributes", () => {
     expect(new NormalCoverage(1, 2).name).toBe("NormalCoverage");
     expect(new NormalCoverage(1, 2).sellIn).toBe(1);
   });

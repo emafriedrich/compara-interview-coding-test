@@ -69,6 +69,7 @@ export class FullCoverage extends Product {
   constructor(protected _sellIn: number, protected _price: number) {
     super("FullCoverage", _sellIn, _price);
   }
+
   protected _updatePrice() {
     const newPrice = this._price + this.increment();
     this._price = newPrice > 50 ? 50 : newPrice;
@@ -97,6 +98,7 @@ export class SpecialFullCoverage extends Product {
   constructor(protected _sellIn: number, protected _price: number) {
     super("SpecialFullCoverage", _sellIn, _price);
   }
+
   protected _updatePrice() {
     const _increment = this.increment();
     if (_increment === 0) {
@@ -124,6 +126,7 @@ export class SuperSale extends NormalCoverage {
     super(_sellIn, _price);
     this._name = "SuperSale";
   }
+
   protected _updatePrice() {
     const newPrice = this._price + this.increment();
     this._price = newPrice >= 0 ? newPrice : 0;
